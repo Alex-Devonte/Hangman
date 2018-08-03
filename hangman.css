@@ -1,0 +1,108 @@
+body {
+  background-color: #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#topic-name {
+  text-align: center;
+}
+
+#game-wrapper {
+  text-align: center;
+}
+
+#lives {
+  border: 2px solid #fff;
+}
+
+#hidden-word {
+  font-size: 30px;
+  margin: 15px;
+}
+
+.dash {
+  font-size: 40px;
+  display: inline;
+  margin: 5px;
+}
+
+.correct-guess {
+  display: inline;
+  font-size: 30px;
+}
+
+.spacer {
+  display: block;
+  height: 10px;
+}
+
+#message {
+  background-color: #ffffffab;
+  border: 3px solid #000;
+  display: none;
+  font-size: 30px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+#letters {
+  background-color: #ffffffab;
+  border: 3px solid #838282;
+  margin: 20px auto;
+  text-align: left;
+
+}
+
+.letter {
+  display: inline-block;
+  font-size: 18px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.letter:hover {
+  background-color: #000;
+  color: #e2dfdf;
+  cursor: pointer;
+}
+
+.used {
+  color: gray;
+  text-decoration: line-through;
+}
+
+
+@media screen and (min-width: 480px) {
+  .dash {
+    font-size: 50px;
+  }
+  
+  .correct-guess {
+    font-size: 40px;
+}
+
+@media screen and (min-width: 700px) {
+  #lives {
+    margin: 50px auto;
+    width: 60%;
+  }
+
+  #hidden-word {
+    margin-bottom: 50px;
+  }
+
+  .spacer {
+    display: inline;
+  }
+
+  #message, #letters {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  #message, #lives, #letters {
+    width: 40%;
+  }
+  
+}
