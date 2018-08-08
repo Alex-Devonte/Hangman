@@ -27,8 +27,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
+  <h1>Select a topic</h1>
   <form method="post" action="hangman.php">
-    <h1>Select a topic</h1>
     <select id="topic" name="topic">
       <?php
         populateDropdown();
