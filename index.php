@@ -28,29 +28,31 @@
 </head>
 <body>
   <h1>Select a topic</h1>
-  <form method="post" action="hangman.php">
-    <select id="topic" name="topic">
-      <?php
-        populateDropdown();
-      ?>
-      <!--<optgroup label="Sports">
-        <option value="NFL Teams">NFL Teams</option>
-        <option value="NBA Teams">NBA Teams</option>
-      </optgroup>
-      <optgroup label="People">
-        <option value="Actors">Actors</option>
-        <option value="US Presidents">US Presidents</option>
-      </optgroup>
-      <optgroup label="Brands">
-        <option value="Apparel">Apparel</option>
-        <option value="Electronics">Electronics</option>
-      </optgroup>
-      <optgroup label="Miscellanous">
-        <option value="Colors">Colors</option>
-        <option value="Months">Months</option>
-      </optgroup>-->
-    </select><br>
-    <button>Select Topic</button>
-  </form>
+  <div id="form-container">
+    <form method="post" action="hangman.php">
+      <select id="topic" name="topic">
+        <?php
+          populateDropdown();
+        ?>
+        <!--<optgroup label="Sports">
+          <option value="NFL Teams">NFL Teams</option>
+          <option value="NBA Teams">NBA Teams</option>
+        </optgroup>
+        <optgroup label="People">
+          <option value="Actors">Actors</option>
+          <option value="US Presidents">US Presidents</option>
+        </optgroup>
+        <optgroup label="Brands">
+          <option value="Apparel">Apparel</option>
+          <option value="Electronics">Electronics</option>
+        </optgroup>
+        <optgroup label="Miscellanous">
+          <option value="Colors">Colors</option>
+          <option value="Months">Months</option>
+        </optgroup>-->
+      </select><br>
+      <button>Select Topic</button>
+    </form>
+  </div>
 </body>
 </html>
