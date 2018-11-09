@@ -1,6 +1,6 @@
 body {
-  background-color: #ccc;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  font-family: 'Geneva', Verdana, sans-serif;
 }
 
 #topic-name {
@@ -12,7 +12,9 @@ body {
 }
 
 #lives {
-  border: 2px solid #fff;
+  background: #3f3f3f;
+  color: #fff;
+  padding: 5px;
 }
 
 #hidden-word {
