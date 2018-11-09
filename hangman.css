@@ -79,6 +79,7 @@ body {
   
   .correct-guess {
     font-size: 40px;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -104,5 +105,4 @@ body {
   #message, #lives, #letters {
     width: 40%;
   }
-  
 }
