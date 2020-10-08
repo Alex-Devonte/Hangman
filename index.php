@@ -9,9 +9,10 @@
     {
       echo "<optgroup label=$row[category]>";
       
-      foreach ($connection->query("SELECT topic FROM topics INNER JOIN categories ON topics.category_id = categories.category_id WHERE topics.category_id = $row[category_id]") as $r)
+      foreach ($connection->query("SELECT sub_category FROM sub_categories INNER JOIN categories ON sub_categories.category_id = categories.category_id WHERE sub_categories.category_id = $row[category_id]") as $r)
       {
-        echo "<option>$r[topic]</option>";
+        
+        echo "<option>$r[sub_category]</option>";
       }
       echo "</optgroup>";
     }
@@ -30,7 +31,7 @@
   <div id="form-container">
     <h1>Select a category</h1>
     <form method="post" action="hangman.php">
-      <select id="categories" name="topic">
+      <select id="categories" name="categories">
         <?php
           populateDropdown();
         ?>
