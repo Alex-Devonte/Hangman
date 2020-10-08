@@ -28,9 +28,9 @@
 </head>
 <body>
   <div id="form-container">
-    <h1>Select a topic</h1>
+    <h1>Select a category</h1>
     <form method="post" action="hangman.php">
-      <select id="topic" name="topic">
+      <select id="categories" name="topic">
         <?php
           populateDropdown();
         ?>
@@ -51,7 +51,7 @@
           <option value="Months">Months</option>
         </optgroup>-->
       </select><br>
-      <button>Select Topic</button>
+      <button>Select Category</button>
     </form>
   </div>
 </body>
