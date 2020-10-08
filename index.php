@@ -51,9 +51,11 @@
           <option value="Colors">Colors</option>
           <option value="Months">Months</option>
         </optgroup>-->
-      </select><br>
-      <button>Select Category</button>
-      <button>Random Category</button>
+      </select>
+      <div id="button-container">
+        <button name="select-category-btn" class="select-btn">Select Category</button>
+        <button name="random-category-btn" class="select-btn">Random Category</button>
+      </div>  
     </form>
   </div>
 </body>
