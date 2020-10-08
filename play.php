@@ -1,26 +1,25 @@
 <?php
   require_once("db_connect.php");
-
-  if (isset($_POST['topic-name']))
+  if (isset($_POST['sub_category']))
   {
-    $topic = $_POST['topic-name'];
+    $sub_category = $_POST['sub_category'];
   }
 
-  $wordList = getWordList($connection, $topic);
+  $wordList = getWordList($connection, $sub_category);
   $randomWord =  getRandomWord($wordList);
 
 
-  echo (json_encode(array("topic" => $topic, "word" => $randomWord)));
+  echo (json_encode(array("sub_category" => $sub_category, "word" => $randomWord)));
   /*
    *  getWordList($connection, $topic)
    *  return array of all words from given topic
    * 
    */
-  function getWordList($connection, $topic)
+  function getWordList($connection, $sub_category)
   {
     $wordList = array();
-    $query = $connection->prepare("SELECT word FROM words INNER JOIN topics on words.topic_id = topics.topic_id WHERE topic = :topic");
-    $query->execute(array("topic" => $topic));
+    $query = $connection->prepare("SELECT word FROM words INNER JOIN sub_categories on words.sub_category_id = sub_categories.sub_category_id WHERE sub_category = :sub_category");
+    $query->execute(array("sub_category" => $sub_category));
 
     foreach ($query as $row)
     {
@@ -42,3 +41,4 @@ function getRandomWord($wordList)
   return $wordList[$randomWord];
 }
 ?>
+
