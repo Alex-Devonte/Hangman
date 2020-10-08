@@ -53,6 +53,7 @@
         </optgroup>-->
       </select><br>
       <button>Select Category</button>
+      <button>Random Category</button>
     </form>
   </div>
 </body>
