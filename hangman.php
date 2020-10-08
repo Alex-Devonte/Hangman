@@ -15,6 +15,7 @@
 </head>
 <body>
   <div id="game-wrapper">
+    <canvas id="hangman" width="180" height="250"></canvas>
     <div id="lives">
       <p><span id="life-counter">10</span> lives remaining</p> 
     </div>
