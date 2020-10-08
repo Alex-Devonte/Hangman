@@ -1,9 +1,9 @@
 <?php
  require_once("db_connect.php");
 
- if (isset($_POST['topic']))
+ if (isset($_POST['sub_category']))
  {
-   $topic = $_POST['topic'];
+   $sub_category = $_POST['sub_category'];
  }
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
-  <h1 id="topic-name"><?php echo $topic; ?></h1>
+  <h1 id="sub_category"><?php echo $sub_category; ?></h1>
   <div id="game-wrapper">
     <div id="lives">
       <p><span id="life-counter">10</span> lives remaining</p> 

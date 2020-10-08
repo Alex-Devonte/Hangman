@@ -31,7 +31,7 @@
   <div id="form-container">
     <h1>Select a category</h1>
     <form method="post" action="hangman.php">
-      <select id="categories" name="categories">
+      <select id="sub_category" name="sub_category">
         <?php
           populateDropdown();
         ?>
