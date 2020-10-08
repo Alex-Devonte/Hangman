@@ -1,33 +1,52 @@
 body {
-  background-color: #f5f5f5;
+  background-color: #9E9E9E;
   font-family: 'Geneva', Verdana, sans-serif;
-  text-align: center;
 }
 
 #form-container {
-  background-color: #ccc;
-  padding: 5px;
+  padding: 50px;
+  text-align: center;
 }
 
 form {
+  display: inline;
   margin: 0 auto;
   padding: 10px;
-  width: 90%;
 }
 
-button, select {
-  padding: 5px;
-  width: 100%;
+#sub_category {
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 35px;
 }
 
-button {
-  background-color: #3f3f3f;
+#sub_category:focus {
+  background-color: #cccccc;
+  transition: 0.1s;
+}
+
+.select-btn {
+  background-color: #000;
+  border: none;
+  border-radius: 15px;
   color: #fff;
+  font-weight: bolder;
+  margin: 40px 25px;
+  opacity: 0.5;
+  outline: none;
+  padding: 10px 15px;
+  transition: 0.3s;
 }
 
-button:hover {
-  background-color: #f2f2f2;
+.select-btn:hover {
+  opacity: 1;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.select-btn:active {
+  background-color: #9E9E9E;
+  color: #000;
 }
 
 @media screen and (min-width: 480px) {
