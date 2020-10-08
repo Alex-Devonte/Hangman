@@ -1,5 +1,5 @@
 $(function() {
-  var topic = $("#topic-name").html();
+  var sub_category = $("#sub_category").html();
   var lives = $("#life-counter");
   var livesCount = 10;
   var hiddenWordContainer = $("#hidden-word");
@@ -8,7 +8,7 @@ $(function() {
   $.ajax({
     type: "POST",
     url: "play.php",
-    data: { "topic-name": topic },
+    data: { "sub_category": sub_category },
     dataType: "json",
     success: function(data) {
       var word = data.word.toUpperCase();
