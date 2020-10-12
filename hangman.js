@@ -1,9 +1,114 @@
 $(function() {
   var sub_category = $("#sub_category").html();
   var lives = $("#life-counter");
-  var livesCount = 10;
+  var livesCount = 7;
   var hiddenWordContainer = $("#hidden-word");
   var lettersContainer = $("#letters");
+
+  var canvas = $("#hangman")[0];
+  context = canvas.getContext("2d");
+  context.strokeStyle = "#000";
+  context.lineWidth = 4;
+  
+ /* var canvasOffset = $("#hangman").offset();
+  var offsetX = canvasOffset.left;
+  var offsetY = canvasOffset.top;
+
+  $("#hangman").mousemove(function(e){
+    mouseX = parseInt(e.clientX - offsetX);
+    mouseY = parseInt(e.clientY - offsetY);
+    console.log("Move: " + mouseX + " / " + mouseY);
+  });*/
+  
+  function drawGallows() {
+    //Base
+    context.moveTo(200, 280);
+    context.lineTo(10, 280);
+    context.stroke();
+    
+    //Pilar
+    context.moveTo(30, 280);
+    context.lineTo(30, 110);
+    context.stroke();
+
+    //Top
+    context.moveTo(30, 110);
+    context.lineTo(130, 110);
+    context.stroke();
+
+    //Hang
+    context.moveTo(130, 110);
+    context.lineTo(130, 150);
+    context.stroke();
+  }
+
+  function drawHead() {
+    context.beginPath();
+    context.arc(130, 165, 15, 0, 2 * Math.PI);
+    context.stroke();
+  }
+  
+  function drawBody() {
+    context.moveTo(130, 180);
+    context.lineTo(130, 230);
+    context.stroke();
+  }
+
+  function drawLeftArm() {
+    context.moveTo(100, 185);
+    context.lineTo(130, 200);
+    context.stroke();
+  }
+
+  function drawRightArm() {
+    context.moveTo(160, 185);
+    context.lineTo(130, 200);
+    context.stroke();
+  }
+
+  function drawLeftLeg() {
+    context.moveTo(105, 250);
+    context.lineTo(130, 225);
+    context.stroke();
+  }
+
+  function drawRightLeg() {
+    context.moveTo(150, 250);
+    context.lineTo(130, 225);
+    context.stroke();
+  }
+
+  function draw(lives) {
+    switch(lives) {
+      case 6:
+        drawGallows();
+        break;
+
+      case 5:
+        drawHead();
+        break;
+
+      case 4:
+        drawBody();
+        break;
+
+      case 3:
+        drawLeftArm();
+        break;
+
+      case 2:
+        drawRightArm();
+        break;
+
+      case 1:
+        drawLeftLeg();
+        break;
+
+      case 0:
+      drawRightLeg();
+      break;
+    }
+  }
 
   $.ajax({
     type: "POST",
@@ -32,6 +137,9 @@ $(function() {
           {
             livesCount--;
             lives.text(livesCount);
+
+            //Draw hangman figure depending on lives count
+            draw(livesCount);
 
             if (livesCount == 0)
             {
