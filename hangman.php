@@ -2,7 +2,12 @@
  require_once("db_connect.php");
  if (isset($_POST['sub_category']))
  {
-   $sub_category = $_POST['sub_category'];
+   if (isset($_POST['random-category-btn']))
+   {
+    $sub_category = $_POST['random-category-btn'];
+   } else {
+    $sub_category = $_POST['sub_category'];
+   }
  }
 ?>
 <!DOCTYPE html>
