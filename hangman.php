@@ -15,10 +15,7 @@
 </head>
 <body>
   <div id="game-wrapper">
-    <canvas id="hangman" width="180" height="250"></canvas>
-    <div id="lives">
-      <p><span id="life-counter">10</span> lives remaining</p> 
-    </div>
+    <canvas id="hangman" width="500" height="300"></canvas>
     <div id="hidden-word"></div>
     <h1 id="sub_category"><?php echo $sub_category; ?></h1>
     <div id="message"></div>
