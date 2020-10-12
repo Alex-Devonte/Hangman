@@ -53,10 +53,11 @@
         </optgroup>-->
       </select>
       <div id="button-container">
-        <button name="select-category-btn" class="select-btn">Select Category</button>
-        <button name="random-category-btn" class="select-btn">Random Category</button>
+        <button name="select-category-btn" class="select-btn" value="select">Select Category</button>
+        <button id="random-category-btn" name="random-category-btn" class="select-btn" value="random">Random Category</button>
       </div>  
     </form>
   </div>
 </body>
+<script src="random.js"></script>
 </html>
